@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Hugo and Github Pages - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="ZZ" /><meta name="description" content="Building a personal website with Hugo in localhost and them commit to the github papes. it was based on the Build a Personal Website With Github Pages and Hugo. In this blog, the operation system is MacOS. Following this, I test the hugo and git in the Ubuntu and Windows 10
+In the WSL Ubuntu:
+I want to do it in the window subsystem for linux (Ubuntu 18.04.2 LTS).
+1 2 3 4 5 6 7 8 9 10 11  # install hugo sudo apt install hugo # check hugo install successfully hugo version # install git sudo apt-get install git # check git install successfully git --version   when hugo and git installed successfully, I start to install typora as the markdown editor." /><meta name="keywords" content="Hugo, theme, even, bioinfo, NGS" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.80.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/hugo-gitbub-pages/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Hugo and Github Pages" />
+<meta property="og:description" content="Building a personal website with Hugo in localhost and them commit to the github papes. it was based on the Build a Personal Website With Github Pages and Hugo. In this blog, the operation system is MacOS. Following this, I test the hugo and git in the Ubuntu and Windows 10
+In the WSL Ubuntu:
+I want to do it in the window subsystem for linux (Ubuntu 18.04.2 LTS).
+1 2 3 4 5 6 7 8 9 10 11  # install hugo sudo apt install hugo # check hugo install successfully hugo version # install git sudo apt-get install git # check git install successfully git --version   when hugo and git installed successfully, I start to install typora as the markdown editor." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/hugo-gitbub-pages/" />
+<meta property="article:published_time" content="2021-02-13T14:37:32-06:00" />
+<meta property="article:modified_time" content="2021-02-13T14:37:32-06:00" />
+<meta itemprop="name" content="Hugo and Github Pages">
+<meta itemprop="description" content="Building a personal website with Hugo in localhost and them commit to the github papes. it was based on the Build a Personal Website With Github Pages and Hugo. In this blog, the operation system is MacOS. Following this, I test the hugo and git in the Ubuntu and Windows 10
+In the WSL Ubuntu:
+I want to do it in the window subsystem for linux (Ubuntu 18.04.2 LTS).
+1 2 3 4 5 6 7 8 9 10 11  # install hugo sudo apt install hugo # check hugo install successfully hugo version # install git sudo apt-get install git # check git install successfully git --version   when hugo and git installed successfully, I start to install typora as the markdown editor.">
+<meta itemprop="datePublished" content="2021-02-13T14:37:32-06:00" />
+<meta itemprop="dateModified" content="2021-02-13T14:37:32-06:00" />
+<meta itemprop="wordCount" content="666">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hugo and Github Pages"/>
+<meta name="twitter:description" content="Building a personal website with Hugo in localhost and them commit to the github papes. it was based on the Build a Personal Website With Github Pages and Hugo. In this blog, the operation system is MacOS. Following this, I test the hugo and git in the Ubuntu and Windows 10
+In the WSL Ubuntu:
+I want to do it in the window subsystem for linux (Ubuntu 18.04.2 LTS).
+1 2 3 4 5 6 7 8 9 10 11  # install hugo sudo apt install hugo # check hugo install successfully hugo version # install git sudo apt-get install git # check git install successfully git --version   when hugo and git installed successfully, I start to install typora as the markdown editor."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">ZIJIAN</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">ZIJIAN</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Hugo and Github Pages</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-02-13 </span>
+        
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#you-can-build-the-site-successfully-but-here-i-found-that-no-blog-list-in-the-index-when-you-scroll-down-there-is-only-one-item-codepostcode-when-you-clik-the-post-the-blog-list-will-appearit-seems-this-theme-is-too-old-and-was-parsed-wrong">You can build the site successfully but here I found that no blog list in the index when you scroll down. There is only one item <code>post</code>. when you clik the post, the blog list will appear.It seems this theme is too old and was parsed wrong.</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>Building a personal website with Hugo in localhost and them commit to the github papes.
+it was based on the Build a <a href="https://levelup.gitconnected.com/build-a-personal-website-with-github-pages-and-hugo-6c68592204c7">Personal Website With Github Pages and Hugo</a>. In this blog, the operation system is MacOS. Following this, I test the hugo and git in the Ubuntu and Windows 10</p>
+<p>In the WSL Ubuntu:</p>
+<p>I want to do it in the window subsystem for linux (Ubuntu 18.04.2 LTS).</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"># install hugo
+sudo apt install hugo
+
+# check hugo install successfully
+hugo version
+
+# install git
+sudo apt-get install git
+
+# check git install successfully
+git --version
+</code></pre></td></tr></table>
+</div>
+</div><p>when hugo and git installed successfully, I start to install typora as the markdown editor. Finally I fail to install it because the namespace error. The firefox was not installed either. So I gave it up to build the website in the Ubuntu</p>
+<p>In the window 10:</p>
+<p>To install hugo in window 10, first make folders</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">/Hugo
+/Hugo/bin
+/Hugo/sites
+</code></pre></td></tr></table>
+</div>
+</div><p>1 download hugo and set up the PATH
+<a href="https://github.com/gohugoio/hugo/releases">https://github.com/gohugoio/hugo/releases</a>
+select hugo_0.80.0_Windows-64bit.zip and download to <code>/hugo/bin</code>. extract all files and make sure <code>hugo.exe</code> in /hugo/bin.</p>
+<p>2 Add the /hugo/bin to the PATH</p>
+<p>3 <code>hugo help</code> test the install successfully</p>
+<p>4 make a new site name mysite</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mkdir website
+cd website
+hugo new site mysite
+</code></pre></td></tr></table>
+</div>
+</div><p>5 choose a theme</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">cd mysite
+cd themes
+git clone https://github.com/vjeantet/hugo-theme-casper
+
+</code></pre></td></tr></table>
+</div>
+</div><p>Here you will have a new site and now let us set up the configuration.
+Find config.toml in <code>mysite</code> folder. open it with text editor.
+Find the example configuration by <a href="https://github.com/vjeantet/vjeantet.fr/blob/master/config.toml">https://github.com/vjeantet/vjeantet.fr/blob/master/config.toml</a>.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">baseurl = &#34;https://[your github username].github.io/&#34;
+copyright = &#34;All rights reserved&#34;
+disqusshortname = &#34;your name&#34;
+languagecode = &#34;en-us&#34;
+paginate = 5
+pluralizelisttitles = false
+theme = &#34;hugo-theme-casper&#34; # must match the folder name in the themes folder
+title = &#34;whatever you like&#34;
+
+[[menu.main]]
+identifier = &#34;blog&#34;
+name = &#34;Blog&#34;
+url = &#34;/post&#34;
+weight = -120
+[[menu.main]]
+name = &#34;Github repos&#34;
+pre = &#34;&lt;h3&gt;Follow me&lt;/h3&gt;&#34;
+url = &#34;your url&#34;
+weight = 100
+[[menu.main]]
+name = &#34;Twitter timeline&#34;
+url = &#34;your url&#34;
+weight = 101
+[[menu.main]]
+name = &#34;Flipboard magazines&#34;
+url = &#34;your url&#34;
+weight = 102
+[[menu.main]]
+name = &#34;Keybase (secure msg)&#34;
+pre = &#34;&lt;h3&gt;Contact me&lt;/h3&gt;&#34;
+url = &#34;your url&#34;
+weight = 109
+
+[params]
+author = &#34;your name&#34;
+authorlocation = &#34;your location&#34;
+authorbio = &#34;your introduction&#34;
+cover = &#34;images/cover_polenord.jpg&#34;
+description = &#34;Whatever the mind of man can conceive and believe, it can achieve.&#34;
+githubName = &#34;your name&#34;
+googleAnalyticsUserID = &#34;your ID&#34;
+hideHUGOSupport = false
+logo = &#34;images/logo.png&#34;
+twitterName = &#34;your name&#34;
+
+
+[permalinks]
+post = &#34;/:slug/&#34;
+[sitemap]
+ChangeFreq = &#34;&#34;
+Filename = &#34;sitemap.xml&#34;
+Priority = &#34;-1&#34;
+</code></pre></td></tr></table>
+</div>
+</div><p>6 create the first page</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">cd mysite
+hugo new about.md
+# you will find a file about.md in the content folder
+</code></pre></td></tr></table>
+</div>
+</div><p>7 test the page in the localhost</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">cd mysite
+hugo server
+</code></pre></td></tr></table>
+</div>
+</div><p>Go to http://localhost:1313/about in your web browser and the page is shown</p>
+<p>8 create the first blog</p>
+<p>since the hugo server is running, you can open a new bash</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">cd mysite
+hugo new post/first.md
+</code></pre></td></tr></table>
+</div>
+</div><p>edit the first.md with your text editor and then go to http://localhost:1313. You will see the index page.</p>
+<h3 id="you-can-build-the-site-successfully-but-here-i-found-that-no-blog-list-in-the-index-when-you-scroll-down-there-is-only-one-item-codepostcode-when-you-clik-the-post-the-blog-list-will-appearit-seems-this-theme-is-too-old-and-was-parsed-wrong">You can build the site successfully but here I found that no blog list in the index when you scroll down. There is only one item <code>post</code>. when you clik the post, the blog list will appear.It seems this theme is too old and was parsed wrong.</h3>
+<p>To continue with another theme <code>hugo-theme-even</code></p>
+<p>git clone the even themes</p>
+<p>edit the config.toml</p>
+<p>start the hugo server</p>
+<p>fresh the browser</p>
+<p>Finally I got an website in a very simple theme</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">ZZ</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2021-02-13
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        
+        
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'ZZ';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="http://localhost:1313" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>ZZ</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
